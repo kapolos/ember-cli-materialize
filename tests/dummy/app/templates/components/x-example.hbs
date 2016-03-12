@@ -1,6 +1,18 @@
-<div class="rendered-example">
-{{partial nameOfPartial}}
-</div>
-<div class="code">
-{{code-snippet name=nameOfTemplate}}
+<div class="row">
+  {{#if title}}
+    <div class="col s12">
+      <h5 class="title">{{title}}</h5>
+    </div>
+  {{/if}}
+  {{#if hasBlock}}
+    <div class="col s12 description">
+      {{yield}}
+    </div>
+  {{/if}}
+  <div class="col m6 s12 hbs-code">
+    {{code-snippet name=nameOfTemplate}}
+  </div>
+  <div class="col m6 s12 rendered-example">
+    {{partial nameOfPartial}}
+  </div>
 </div>

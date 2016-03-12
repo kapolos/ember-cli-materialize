@@ -9,5 +9,10 @@ export default Component.extend({
   }),
   nameOfPartial: computed('name', function() {
     return `snippets/${this.get('name')}`;
-  })
+  }),
+  actions: {
+    pageChanged() {
+      this.sendAction('pageChanged', ...arguments);
+    }
+  }
 });
