@@ -1,0 +1,16 @@
+{{#if icon}}
+<i class="material-icons prefix">{{icon}}</i>
+{{/if}}
+<input
+  value={{value}}
+  id={{_inputId}}
+  type={{type}}
+  placeholder={{placeholder}}
+  disabled={{disabled}}
+  class={{_classesForInput}}>
+<label
+  for={{_inputId}}
+  class={{labelClass}}>
+  {{label}}
+</label>
+{{yield}}

@@ -1,0 +1,17 @@
+{{#if icon}}
+<i class="material-icons prefix">{{icon}}</i>
+{{/if}}
+<textarea
+  value={{value}}
+  rows={{rows}}
+  cols={{cols}}
+  id={{_inputId}}
+  placeholder={{placeholder}}
+  disabled={{disabled}}
+  class={{_classesForTextarea}} />
+<label
+  for={{_inputId}}
+  class={{labelClass}}>
+  {{label}}
+</label>
+{{yield}}

@@ -4,6 +4,8 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
+    snippetPaths: ['tests/dummy/app/templates/snippets'],
+    snippetSearchPaths: ['tests/dummy', 'app', 'addon'],
     sassOptions: {
       includePaths: [
         'bower_components/Materialize/sass'

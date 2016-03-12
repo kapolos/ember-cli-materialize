@@ -1,0 +1,21 @@
+<select id={{_inputId}}
+  placeholder={{placeholder}}
+  disabled={{disabled}}
+  {{action 'change' on='change'}}>
+  {{#if _placeholderText}}
+    <option value="" disabled selected>{{_placeholderText}}</option>
+  {{/if}}
+  {{#each _choices key="@index" as |item|}}
+    <option value="{{item.value}}" selected={{md-is-equal item.value value}}>
+      {{item.text}}
+    </option>
+  {{/each}}
+
+</select>
+<label
+  for={{_inputId}}
+  class={{labelClass}}>
+  {{label}}
+</label>
+
+<b>Selected: {{value}}</b>
