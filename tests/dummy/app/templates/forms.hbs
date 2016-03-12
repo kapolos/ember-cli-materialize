@@ -1,0 +1,38 @@
+{{#x-component-doc title="md-input" as |doc|}}
+  {{#doc.params as |p|}}
+    {{#p.param name="type" type="string" default="text"}}
+      the input type, consistent with the HTML5 <span class="code">&lt;input type="" /&gt;</span> attribute.
+    {{/p.param}}
+    {{#p.param name="value" type="string"}}
+      Value binding for the input
+    {{/p.param}}
+    {{#p.param name="placeholder" type="string"}}
+      Placeholder text to use for empty inputs. Analagous to the HTML5 <span class="code">&lt;input placeholder="" /&gt;</span> attribute.
+    {{/p.param}}
+    {{#p.param name="label" type="string"}}
+    The field's label. By default, also used as the placeholder
+    {{/p.param}}
+    {{#p.param name="icon" type="string"}}
+    The field's icon prefix. Valid values are all google material design icon ligatures.
+    {{/p.param}}
+    {{#p.param name="disabled" type="bool" default="false"}}
+    The disabled/enabled state of the field
+    {{/p.param}}
+    {{#p.param name="inputClass" type="string"}}
+      Additional CSS classes to add to the <span class="code">&lt;input&gt;</span> element.
+    {{/p.param}}
+    {{#p.param name="labelClass" type="string"}}
+    Additional CSS classes to add to the <span class="code">&lt;label&gt;</span> element.
+    {{/p.param}}
+  {{/doc.params}}
+  {{#doc.actions as |a|}}
+    {{#a.action name="on-change"}}
+      Called whenever the value of the field changes
+    {{/a.action}}
+  {{/doc.actions}}
+{{/x-component-doc}}
+
+{{x-example name='basic-input'}}
+{{x-example name='icon-input'}}
+{{x-example name='basic-textarea'}}
+{{x-example name='basic-select'}}

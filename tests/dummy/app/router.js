@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('forms');
+  this.route('collapsible');
 });
 
 export default Router;

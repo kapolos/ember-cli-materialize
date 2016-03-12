@@ -6,9 +6,16 @@ const { computed, Component } = Ember;
 
 export default Component.extend({
   classNames: ['md-select', 'input-field'],
-  content: ["1", "2", "3"],
-  contentValueProp: '',
-  contentDisplayProp: '',
+  content: [
+    {id: 1, text: "One", img: 'http://materializecss.com/images/yuna.jpg'},
+    {id: 2, text: "Two", img: 'http://materializecss.com/images/yuna.jpg'},
+    {id: 3, text: "Three", img: 'http://materializecss.com/images/yuna.jpg'}
+  ],
+  contentValueProp: 'id',
+  contentDisplayProp: 'text',
+  contentIconProp: 'img',
+  iconAlign: 'right',
+  optionClass: 'circle',
   value: null,
   placeholder: null,
   _isDropdownOpen: false,
@@ -32,13 +39,17 @@ export default Component.extend({
     this._super(...arguments);
     this.$('select').material_select();
   },
+  _selectClasses: computed('contentIconProp', function() {
+    return this.get('contentIconProp') ? 'icons' : '';
+  }),
   _choices: computed('content', 'contentValueProp', 'contentDisplayProp', {
     get() {
       const arr = this.get('content') || [];
       const choices = arr.map((x) => {
         return {
           value: Ember.get(x, this.get('contentValueProp')),
-          text:  Ember.get(x, this.get('contentDisplayProp'))
+          text:  Ember.get(x, this.get('contentDisplayProp')),
+          icon: this.get('contentIconProp') ? Ember.get(x, this.get('contentIconProp')) : null
         };
       });
       return choices

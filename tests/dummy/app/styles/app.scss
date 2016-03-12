@@ -1,2 +1,9 @@
 @import "materialize";
 @import "x-example";
+@import "x-component-doc";
+.code {
+  padding: 2px;
+  background-color: color('grey', 'lighten-2');
+  font-family: monospace;
+  white-space: pre;
+}

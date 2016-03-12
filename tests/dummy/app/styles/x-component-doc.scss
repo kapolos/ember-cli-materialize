@@ -1,0 +1,71 @@
+.x-component-doc {
+  & > .row:first-child {
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+    .component-name {
+      font-weight: 900;
+      padding: 5px 2px;
+      display: inline-block;
+    }
+  }
+  .x-component-doc-param .param-name,
+  .x-component-doc-action .action-name{
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: monospace;
+  }
+
+  .x-component-doc-actions,
+  .x-component-doc-params {
+    & > .row {
+      background-color: color('grey', 'darken-2');
+      h5 {
+        color: white;
+      }
+    }
+  }
+
+  .x-component-doc-action,
+  .x-component-doc-param {
+    &:nth-child(odd) {
+      .row {
+        background-color: color('grey', 'lighten-4');
+      }
+    }
+
+    .row {
+      border-bottom: 1px dashed #ddd;
+      padding-bottom: 3px;
+      padding-top: 3px;
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      .row {
+        border-bottom: 2px solid #333;
+      }
+    }
+  }
+
+  .x-component-doc-action {
+    .action-name {
+      color: color('green', 'base');
+    }
+  }
+  .x-component-doc-param {
+
+    .param-type {
+      .badge {
+        margin-left: 3px;
+        margin-top: 6px;
+      }
+    }
+    .default-value {
+      margin-top: 5px;
+      max-width: 200px;
+      text-align: right;
+      white-space: nowrap;
+    }
+  }
+}
