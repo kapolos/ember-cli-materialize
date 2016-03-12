@@ -1,5 +1,3 @@
 {
-  "preset": "ember-suave",
-  "excludeFiles": ["blanket-options.js"],
-  "requireParenthesesAroundArrowParam": null
+  "preset": "ember-suave"
 }
