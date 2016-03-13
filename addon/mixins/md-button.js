@@ -1,8 +1,9 @@
 import Ember from 'ember';
+import ClickAction from '../mixins/click-action';
 
 const { computed, Mixin } = Ember;
 
-export default Mixin.create({
+export default Mixin.create(ClickAction, {
   baseButtonClass: 'btn',
   classNameBindings: ['_isWaves:waves-effect', '_waveType', 'baseButtonClass'],
   attributeBindings: ['disabled'],
@@ -13,8 +14,5 @@ export default Mixin.create({
   }),
   _waveType: computed('waves', function() {
     return `waves-${this.get('waves')}`;
-  }),
-  click() {
-    this.sendAction('on-click');
-  }
+  })
 });

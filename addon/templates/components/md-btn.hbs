@@ -1,1 +1,14 @@
-{{partial 'content-with-icon'}}
+{{#if icon}}
+  <i class="material-icons {{iconClass}}">
+    {{icon}}
+  </i>
+{{/if}}
+{{#if hasBlock}}
+  {{yield (hash
+    dropdown=(component 'md-dropdown-menu' _dropdownRoot=this)
+  )}}
+{{else}}
+  {{text}}
+{{/if}}
+
+
