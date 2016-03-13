@@ -8,7 +8,7 @@ module.exports = function(defaults) {
     snippetSearchPaths: ['tests/dummy', 'app', 'addon'],
     sassOptions: {
       includePaths: [
-        'bower_components/Materialize/sass'
+        'bower_components/materialize/sass'
       ]
     }
   });
