@@ -6,14 +6,10 @@ const { computed, Component } = Ember;
 
 export default Component.extend({
   classNames: ['md-select', 'input-field'],
-  content: [
-    {id: 1, text: "One", img: 'http://materializecss.com/images/yuna.jpg'},
-    {id: 2, text: "Two", img: 'http://materializecss.com/images/yuna.jpg'},
-    {id: 3, text: "Three", img: 'http://materializecss.com/images/yuna.jpg'}
-  ],
-  contentValueProp: 'id',
-  contentDisplayProp: 'text',
-  contentIconProp: 'img',
+  content: null,
+  contentValueProp: '',
+  contentDisplayProp: '',
+  contentIconProp: '',
   iconAlign: 'right',
   optionClass: 'circle',
   value: null,

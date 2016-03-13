@@ -9,13 +9,13 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{md-btn-link}}`);
+  this.render(hbs`{{md-btn-link 'Index' 'index'}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'Index');
 
   // Template block usage:
   this.render(hbs`
-    {{#md-btn-link}}
+    {{#md-btn-link 'index'}}
       template block text
     {{/md-btn-link}}
   `);

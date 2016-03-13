@@ -1,3 +1,4 @@
+/*global window: true*/
 import Ember from 'ember';
 
 const { computed, Component } = Ember;
@@ -31,7 +32,7 @@ export default Component.extend({
   }),
   actions: {
     wasClicked(arg) {
-      alert(arg);
+      window.alert(arg);
     },
     pageChanged() {
       this.sendAction('pageChanged', ...arguments);

@@ -4,4 +4,4 @@ const { Route } = Ember;
 
 export default Route.extend({
 
-})
+});

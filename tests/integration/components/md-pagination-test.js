@@ -11,7 +11,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{md-pagination}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim().replace(/[\s\n]+/g,''), 'chevron_left1chevron_right');
 
   // Template block usage:
   this.render(hbs`
@@ -20,5 +20,5 @@ test('it renders', function(assert) {
     {{/md-pagination}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim().replace(/[\s\n]+/g,''), 'chevron_left1chevron_right');
 });
