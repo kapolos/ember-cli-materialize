@@ -1,7 +1,6 @@
 import Ember from 'ember';
 import layout from '../templates/components/md-btn';
 import Button from '../mixins/md-button';
-import ClickAction from '../mixins/click-action';
 
 const { computed, Component } = Ember;
 
