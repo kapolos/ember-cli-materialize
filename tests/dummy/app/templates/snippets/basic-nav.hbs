@@ -1,0 +1,21 @@
+{{#md-nav class='deep-orange' as |n|}}
+  {{n.title 'Ember' 'index' classNames='center'}}
+  {{#n.menu class='left' as |m|}}
+    {{m.link-to 'A' 'nav' (query-params a="1") icon='star'}}
+    {{m.link-to 'B' 'nav' (query-params a="2")}}
+  {{/n.menu}}
+  {{#n.menu class="right" as |m|}}
+    {{m.link-to 'C' 'nav' (query-params a="3")}}
+    {{m.link-to 'D' 'nav' (query-params a="4")}}
+    {{#m.dropdown as |d|}}
+      {{d.trigger text='E'}}
+      {{#d.menu as |dm|}}
+        {{dm.link-to 'F' 'nav' (query-params a="5")}}
+        {{dm.link-to 'G' 'nav' (query-params a="6")}}
+        <li class="divider"></li>
+        {{dm.link-to 'H' 'nav' (query-params a="7")}}
+        {{dm.link-to 'I' 'nav' (query-params a="8")}}
+      {{/d.menu}}
+    {{/m.dropdown}}
+  {{/n.menu}}
+{{/md-nav}}

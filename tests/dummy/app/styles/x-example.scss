@@ -1,5 +1,31 @@
 .x-example {
-  .code {
-    border: 1px solid #aaa;
+  .hbs-code {
+    border: 1px solid #ddd;
+    background: #f8f8f8;
+  }
+  &.basic-buttons,
+  &.flat-buttons,
+  &.link-buttons {
+    .btn {
+      margin: 10px;
+    }
+  }
+  &.link-buttons {
+    .btn.active {
+      @extend .z-depth-5;
+    }
+  }
+  &.sidenav-example {
+    .rendered-example {
+      position: relative;
+      min-height: 200px;
+      .side-nav {
+        left: 0;
+        width: 250px;
+        height: auto;
+        max-height: 200px;
+        position: absolute;
+      }
+    }
   }
 }

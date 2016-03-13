@@ -1,0 +1,21 @@
+{{md-btn text='Duck'
+  class="btn-flat"
+  on-click=(action
+    'wasClicked'
+    'Duck clicked!'
+  )}}
+
+{{md-btn text='Duck'
+  waves="red"
+  icon="lightbulb_outline"
+  iconClass="right"
+  waves='dark'
+  class="btn-flat red white-text"}}
+
+{{md-btn text='Goose!'
+  disabled=true
+  classNames="btn-flat"
+  on-click=(action
+    'wasClicked'
+    'Goose clicked!'
+  )}}

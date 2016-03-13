@@ -9,10 +9,11 @@
       {{yield}}
     </div>
   {{/if}}
-  <div class="col m6 s12 hbs-code">
-    {{code-snippet name=nameOfTemplate}}
-  </div>
-  <div class="col m6 s12 rendered-example">
+  <div class="col {{_horizClassOption2}} s12 rendered-example">
     {{partial nameOfPartial}}
   </div>
+  <div class="col {{_horizClassOption1}} s12 hbs-code">
+    {{code-snippet name=nameOfTemplate}}
+  </div>
+
 </div>

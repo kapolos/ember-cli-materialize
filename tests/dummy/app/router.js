@@ -10,6 +10,9 @@ Router.map(function() {
   this.route('collapsible');
   this.route('pagination');
   this.route('collection');
+  this.route('nav');
+  this.route('sidenav');
+  this.route('button');
 });
 
 export default Router;
