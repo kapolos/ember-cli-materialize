@@ -3,8 +3,8 @@ import Ember from 'ember';
 const { computed, Mixin } = Ember;
 
 export default Mixin.create({
-  classNames: ['btn'],
-  classNameBindings: ['_isWaves:waves-effect', '_waveType'],
+  baseButtonClass: 'btn',
+  classNameBindings: ['_isWaves:waves-effect', '_waveType', 'baseButtonClass'],
   attributeBindings: ['disabled'],
   waves: 'light',
   iconClass: 'left',

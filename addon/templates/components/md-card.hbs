@@ -1,1 +1,11 @@
-{{yield}}
+{{#if image}}
+  <div class="card-image">
+    <img src={{image}} alt="">
+    <span class="card-title {{_extraTitleClasses}}">{{title}}</span>
+  </div>
+{{/if}}
+{{yield (hash
+  content=(component 'md-card-content' card=this)
+  actions=(component 'md-card-actions' card=this)
+   reveal=(component 'md-card-reveal' card=this)
+)}}

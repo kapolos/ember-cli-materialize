@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('nav');
   this.route('sidenav');
   this.route('button');
+  this.route('card');
 });
 
 export default Router;
