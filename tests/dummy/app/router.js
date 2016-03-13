@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('sidenav');
   this.route('button');
   this.route('card');
+  this.route('loader');
 });
 
 export default Router;
