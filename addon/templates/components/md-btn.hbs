@@ -3,12 +3,9 @@
     {{icon}}
   </i>
 {{/if}}
-{{#if hasBlock}}
-  {{yield (hash
-    dropdown=(component 'md-dropdown-menu' _dropdownRoot=this)
-  )}}
-{{else}}
-  {{text}}
-{{/if}}
+{{yield (hash
+  dropdown=(component 'md-dropdown-menu' _dropdownRoot=this)
+)}}
+{{text}}
 
 

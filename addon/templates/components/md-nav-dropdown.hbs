@@ -1,3 +1,6 @@
+{{#if text}}
+  {{md-dropdown-trigger text=text}}
+{{/if}}
 {{yield (hash
   trigger=(component 'md-dropdown-trigger' _dropdownRoot=this)
   menu=(component 'md-dropdown-menu' _dropdownRoot=this)
