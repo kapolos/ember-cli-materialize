@@ -9,7 +9,7 @@
   {{#each _choices key="@index" as |item|}}
     <option
       value="{{item.value}}"
-      selected={{md-is-equal item.value value}}
+      selected={{eq item.value value}}
       data-icon={{item.icon}}
       class={{optionClass}}>
       {{item.text}}
